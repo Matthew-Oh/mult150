@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class PrefabGenerator : MonoBehaviour
 {
+    void Start() 
+    {
+        for (int i = 0; i < 10; i++) 
+        {
+            Instantiate(prefab, transform.position, transform.rotation);
+            transform.position += Vector3.right * 10;
+        }
+    }
 public GameObject prefab;
 void Update()
 {
